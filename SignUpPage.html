@@ -12,7 +12,7 @@
     <header>
         <div class="head">
             <div class="links">
-                <a href=""><img src="./img/logo_color.png" alt="logo" id="logo-head"></a>
+                <a method="get" action="/"><img src="./img/logo_color.png" alt="logo" id="logo-head"></a>
                 <a href="https://vk.com/legionbmstu"><img src="./img/vk.png" alt="vk" id="vk"></a>
                 <a href="https://t.me/legionbmstu"><img src="./img/tg.png" alt="tg" id="tg"></a>
             </div>
@@ -26,40 +26,40 @@
                     <p class="name-l">LEGIONER</p>
                 </div>
                 <div class="down">
-                    <form method="POST" action="/register" class="external-field"> 
+                    <form method="post" action="/add_user" class="external-field"> 
                         <div class="field b">
                             <img src="packet.svg" alt="packet" class="img-field">
-                            <input type="text" placeholder="First Name" id="first_name" class="input-field">
+                            <input type="text" name="first_name" placeholder="First Name" id="first_name" class="input-field">
                             <hr size="1" width="370px">
                         </div>
                         <div class="field b">
                             <img src="packet.svg" alt="packet" class="img-field">
-                            <input type="text" placeholder="Last Name" id="last_name" class="input-field">
+                            <input type="text" name="last_name" placeholder="Last Name" id="last_name" class="input-field">
                             <hr size="1" width="370px">
                         </div>
                         <div class="field b">
                             <img src="packet.svg" alt="packet" class="img-field">
-                            <input type="text" placeholder="Team" id="team_name" class="input-field">
+                            <input type="text" name="team_name" placeholder="Team" id="team_name" class="input-field">
                             <hr size="1" width="370px">
                         </div>
                         <div class="field b">
                             <img src="packet.svg" alt="packet" class="img-field">
-                            <input type="text" placeholder="Email" id="email" class="input-field">
+                            <input type="text" name="email" placeholder="Email" id="email" class="input-field">
                             <hr size="1" width="370px">
                         </div>
                         <div class="field b">
                             <img src="password.svg" alt="password" class="img-field">
-                            <input type="text" placeholder="Password" id="password" class="input-field">
+                            <input type="text" name="password" placeholder="Password" id="password" class="input-field">
                             <hr size="1" width="370px">
                         </div>
                         <div class="field b">
                             <img src="password.svg" alt="password" class="img-field">
-                            <input type="text" placeholder="Repeat Password" id="password_2" class="input-field">
+                            <input type="text" name="password_2" placeholder="Repeat Password" id="password_2" class="input-field">
                             <hr size="1" width="370px">
                         </div>
                         <div class="field b">
                             <img src="password.svg" alt="password" class="img-field">
-                            <input type="text" placeholder="Key Word" id="key_team" class="input-field">
+                            <input type="text" name="key_team" placeholder="Key Word" id="key_team" class="input-field">
                             <hr size="1" width="370px">
                         </div>
                         <button type="submit" class="submit signup"><p>SIGN UP</p></button>

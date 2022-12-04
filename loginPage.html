@@ -12,7 +12,7 @@
     <header>
         <div class="head">
             <div class="links">
-                <a href=""><img src="./img/logo_color.png" alt="logo" id="logo-head"></a>
+                <a method="get" action="/"><img src="./img/logo_color.png" alt="logo" id="logo-head"></a>
                 <a href="https://vk.com/legionbmstu"><img src="./img/vk.png" alt="vk" id="vk"></a>
                 <a href="https://t.me/legionbmstu"><img src="./img/tg.png" alt="tg" id="tg"></a>
             </div>
@@ -26,26 +26,23 @@
                     <p class="name-l">LEGIONER</p>
                 </div>
                 <div class="down">
-                    <form method="POST" action="/login" class="external-field"> 
+                    <form method="post" action="/login" class="external-field"> 
                         <div class="field s">
                             <img src="./img/packet.svg" alt="packet" class="img-field">
-                            <input type="text" placeholder="Email ID" id="email" class="input-field">
+                            <input type="text" name="email" placeholder="Email" id="email" class="input-field">
                             <hr size="1" width="370px">
                         </div>
                         <div class="field s">
                             <img src="./img/password.svg" alt="password" class="img-field">
-                            <input type="text" placeholder="Password" id="password" class="input-field">
+                            <input type="text" name="password" placeholder="Password" id="password" class="input-field">
                             <hr size="1" width="370px">
                         </div>
                         <button type="submit" class="submit"><img src="./img/login.svg">
-                            <script>
-
-                            </script>
                         </button>
                     </form>
                 </div>
             </div>
-            <a href = "SignUpPage.html" class="sign">SIGN UP</a>
+            <a href = "/register" class="sign">SIGN UP</a>
         </div>
         <div class="r-column"> </div>
     </main>
