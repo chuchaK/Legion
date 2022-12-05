@@ -1,3 +1,7 @@
+
+// const app = require('./connect_express.js')
+// const connection = require('./connect_sql.js')
+
 async function getUserDataFromDB(email) {
 	let userData;
 	let promise = new Promise((resolve, reject) => {connection.query('SELECT * FROM users WHERE email = ?', [email], function(error, results, fields) {
@@ -24,8 +28,8 @@ function htmlEditUserData(data) {
 	document.getElementById('email-name-text').innerHTML = data.email;
 }
 
-async function main() {
-	// const email = ; !!!!!! Получить email из сессии или куки
+module.exports = async function main(email) {
+	console.log(request.session);
 	if (email) {
 		const userData = await getUserDataFromDB(email);
 		console.log('3',userData)
@@ -38,6 +42,4 @@ async function main() {
 	} else {
 		console.error('Session not have email!');
 	}
-}
-
-main();
+};

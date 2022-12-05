@@ -1,8 +1,11 @@
+
 const { resolve } = require('path');
 const path = require('path');
 
 const app = require('./connect_express.js')
 const connection = require('./connect_sql.js')
+
+const profile = require('./profile.js');
 
 require('./register.js')
 
@@ -48,6 +51,8 @@ app.use('/home', async function(request, response) {
 	// If the user is loggedin
 	if (request.session.loggedin) {
 		response.sendFile(path.join(__dirname + '/Profile.html'));
+		const email = request.session.email;
+		profile.main(email);
 	} else {
 		// Not logged in
 		response.redirect('/');
