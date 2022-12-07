@@ -29,6 +29,7 @@
     height: 100%; 
 }
 .window {
+    position: relative;
     width: 1100px;
     height: 673px;
     background: #313131;

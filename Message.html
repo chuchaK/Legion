@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style/All.css">
     <link rel="stylesheet" href="./style/Pages.css">
+    <link rel="stylesheet" href="./style/Message.css">
     <title>Document</title>
 </head>
 <body>
@@ -29,16 +30,20 @@
                 <div></div>
             </div>
             <div class="window">
-                <div>
-                    <input
+                <div class="chat">
+                    <br><p class="{message.author === 'user' ? 'message-right' : 'message-left'}"> 
+                    <br>
+                </div>
+                <div class="send-mes">
+                    <div><input
                         class="message"
                         type="text"
                         name="chat"
                         id = "chat"
                         bind:value={userMessage}
                         placeholder="Сообщение"
-                    />                        
-                    <button type="button" class="send" on:click={sendHandler}><img class = "send-p" src = "/frontend/public/img/favicon.svg" alt = "Отправить"></button>
+                    /></div>                        
+                    <button type="button" class="send" on:click={sendHandler}><img class = "send-p" src = "./img/Email.svg" alt = "Отправить"></button>
                 </div>
             </div>
         </div>
