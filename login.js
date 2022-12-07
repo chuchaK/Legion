@@ -52,7 +52,7 @@ app.use('/home', async function(request, response) {
 	if (request.session.loggedin) {
 		response.sendFile(path.join(__dirname + '/Profile.html'));
 		const email = request.session.email;
-		profile.main(email);
+		// profile.main(email);
 	} else {
 		// Not logged in
 		response.redirect('/');
@@ -62,6 +62,21 @@ app.use('/home', async function(request, response) {
 app.get('/profile.js', function(request, response) {
 	// Render login template
 	response.sendFile(path.join(__dirname + '/profile.js'));
+});
+
+app.get('/calendar', function(request, response) {
+	// Render login template
+	response.sendFile(path.join(__dirname + '/Calendar.html'));
+});
+
+app.get('/profile', function(request, response) {
+	// Render login template
+	response.sendFile(path.join(__dirname + '/Profile.html'));
+});
+
+app.get('/message', function(request, response) {
+	// Render login template
+	response.sendFile(path.join(__dirname + '/Message.html'));
 });
 
 app.listen(3000);

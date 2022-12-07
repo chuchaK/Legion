@@ -23,12 +23,23 @@
         <div class="l-column"> </div>
         <div class="center-column"> 
             <div class="buttons-left">
-                <button class="button pass" onclick="document.location='Profile.html'"><img src="./img/profile.svg"></button>
-                <button class="button mes act" onclick="document.location='Message.html'"><img src="./img/message.svg"></button>
-                <button class="button pass" onclick="document.location='Calendar.html'"><img src="./img/calendar.svg"></button> 
+                <button class="button pass" onclick="document.location='/profile'"><img src="./img/profile.svg"></button>
+                <button class="button mes act" onclick="document.location='/message'"><img src="./img/message.svg"></button>
+                <button class="button pass" onclick="document.location='/calendar'"><img src="./img/calendar.svg"></button> 
                 <div></div>
             </div>
             <div class="window">
+                <div>
+                    <input
+                        class="message"
+                        type="text"
+                        name="chat"
+                        id = "chat"
+                        bind:value={userMessage}
+                        placeholder="Сообщение"
+                    />                        
+                    <button type="button" class="send" on:click={sendHandler}><img class = "send-p" src = "/frontend/public/img/favicon.svg" alt = "Отправить"></button>
+                </div>
             </div>
         </div>
         <div class="r-column"> </div>
