@@ -1,0 +1,37 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  link(rel='stylesheet' href='./style/All.css')
+  link(rel='stylesheet' href='./style/Login_SignUp.css')
+  title Document
+header
+  .head
+    .links
+      a(method='get' action='/')
+        img#logo-head(src='./img/logo_color.png' alt='logo')
+      a(href='https://vk.com/legionbmstu')
+        img#vk(src='./img/vk.png' alt='vk')
+      a(href='https://t.me/legionbmstu')
+        img#tg(src='./img/tg.png' alt='tg')
+main
+  .l-column  
+  .center-column
+    .form.external
+      .form.up
+        p.name-l LEGIONER
+      .down
+        form.external-field(method='post' action='/login')
+          .field.s
+            img.img-field(src='./img/packet.svg' alt='packet')
+            input#email.input-field(type='text' name='email' placeholder='Email')
+            hr(size='1' width='370px')
+          .field.s
+            img.img-field(src='./img/password.svg' alt='password')
+            input#password.input-field(type='text' name='password' placeholder='Password')
+            hr(size='1' width='370px')
+          button.submit(type='submit')
+            img(src='./img/login.svg')
+    a.sign(href='/profile/new') SIGN UP
+  .r-column  

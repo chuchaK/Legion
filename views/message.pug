@@ -1,0 +1,42 @@
+    doctype html
+    head
+      meta(charset='UTF-8')
+      meta(http-equiv='X-UA-Compatible' content='IE=edge')
+      meta(name='viewport' content='width=device-width, initial-scale=1.0')
+      link(rel='stylesheet' href='./style/All.css')
+      link(rel='stylesheet' href='./style/Pages.css')
+      link(rel='stylesheet' href='./style/Message.css')
+      title Document
+    header
+      .head
+        .links
+          a(method='get' action='/')
+            img#logo-head(src='./img/logo_color.png' alt='logo')
+          a(href='https://vk.com/legionbmstu')
+            img#vk(src='./img/vk.png' alt='vk')
+          a(href='https://t.me/legionbmstu')
+            img#tg(src='./img/tg.png' alt='tg')
+        button.enter(onclick="document.location='/logout'")
+          p.enter-l ВЫХОД ЕСТЬ
+    main
+      .l-column  
+      .center-column
+        .buttons-left
+          button.button.pass(onclick="document.location='/profile'")
+            img(src='./img/profile.svg')
+          button.button.mes.act(onclick="document.location='/message'")
+            img(src='./img/message.svg')
+          button.button.pass(onclick="document.location='/calendar'")
+            img(src='./img/calendar.svg')
+          div
+        .window
+          .chat
+            br
+            p.(class="{message.author === 'user' ? 'message-right' : 'message-left'}")
+              br
+          .send-mes
+            div
+              input#chat.message(type='text' name='chat' bind:value='{userMessage}' placeholder='Сообщение')
+            button.send(type='button' on:click='{sendHandler}')
+              img.send-p(src='./img/Email.svg' alt='Отправить')
+      .r-column  

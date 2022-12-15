@@ -27,6 +27,11 @@
 .pen {
     height: 25px;
 }
+
+.pen:hover {
+    cursor: pointer;
+}
+
 .ps {
     opacity: 0.2;
     text-align: center;
