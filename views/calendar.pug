@@ -1,0 +1,40 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  link(rel='stylesheet' href='./style/All.css')
+  link(rel='stylesheet' href='./style/Pages.css')
+  link(rel='stylesheet' href='https://uicdn.toast.com/calendar/latest/toastui-calendar.min.css')
+  script(src='https://uicdn.toast.com/calendar/latest/toastui-calendar.min.js')
+  script(src='https://uicdn.toast.com/tui.code-snippet/latest/tui-code-snippet.min.js')
+  title Legion
+header
+  .head
+    .links
+      a(href='')
+        img#logo-head(src='./img/logo_color.png' alt='logo')
+      a(href='https://vk.com/legionbmstu')
+        img#vk(src='./img/vk.png' alt='vk')
+      a(href='https://t.me/legionbmstu')
+        img#tg(src='./img/tg.png' alt='tg')
+    button.enter(onclick="document.location='/logout'")
+      p.enter-l ВЫХОД ЕСТЬ
+main
+  .l-column  
+  .center-column
+    .buttons-left
+      button.button.pass(onclick="document.location='/profile'")
+        img(src='./img/profile.svg')
+      button.button.pass(onclick="document.location='/message'")
+        img(src='./img/message.svg')
+      button.button.cal.act(onclick="document.location='/calendar'")
+        img(src='./img/calendar.svg')
+      div
+    .window
+      p(align='center')
+        iframe(src='https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23575d6b&ctz=Europe%2FMoscow&showTz=0&showTitle=1&showNav=0&showDate=1&showTabs=0&showPrint=0&title=Legion&src=aWduYXRtYXRzYWxAZ21haWwuY29t&src=dHRkOGhva2JtczI4YmpqZDk3a2RhZWFnaGdAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&src=YmVpYjUyNzhnY3VrY2tiYnVpMzdnM3I1ZDBAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&src=cDA3OGI5aW5vYzc4bzVrdHRvaXNmODg2ZGNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&src=OGJhNTlhYmM2OWM5NmFkMjQ2M2EyZTE3Y2FkNjg4NDNhMTQ5MDFkNmQyOTA3YWI0YTg3ZDdhZDJhMTE5ZjBiY0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=ZzlzczB0djBkNmw2OHMxMzNnNHFmZnFuNGtAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&src=bnA1aW9iOTczcnVqNGs0ZHFrZThmNzludDBAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%237986CB&color=%239E69AF&color=%23EF6C00&color=%23AD1457&color=%23C0CA33&color=%23F09300&color=%23E4C41' style='border:solid 1px #777' width='1000' height='600' frameborder='0' scrolling='no')
+
+  .r-column
+    
+              
