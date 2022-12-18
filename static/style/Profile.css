@@ -1,0 +1,74 @@
+.avatar {
+    height: 120px;
+    width: 120px;
+}
+
+.window {
+    padding: 35px;
+    grid-template-rows: 160px 440px;
+}
+.up {
+    height: 160px;
+    display: grid;
+    grid-template-columns: 160px 160px 160px 160px 160px 160px;
+    grid-column-gap: 20px;
+}
+.field {
+    text-align: center;
+}
+[class$="text"] {
+    color: #FFFFFF; 
+    font-size: 21px;
+    margin-top: 15px;
+    font-family: 'Gilroy';
+    font-style: normal;
+}
+
+.pen {
+    height: 25px;
+}
+
+.pen:hover {
+    cursor: pointer;
+}
+
+.ps {
+    opacity: 0.2;
+    text-align: center;
+}
+
+.level-in {
+    color: #FFFFFF; 
+    font-size: 44px;
+    font-family: 'Gilroy';
+    font-style: normal;
+}
+
+hr {
+    size: "1";
+    width: "1030px";
+    border-color: #C10F0F;
+    opacity: 0.3;
+}
+
+.achivment {
+    padding-top: 40px;
+}
+
+.lab {
+    color: #FFFFFF; 
+    font-size: 30px;
+    font-family: 'Gilroy';
+    font-style: normal;
+    margin-bottom: 20px;
+}
+.check {
+    font-size: 25px;
+    font-family: 'Gilroy';
+    font-style: normal;
+    margin-bottom: 10px;
+}
+
+.last {
+    margin-bottom: 20px;
+}

@@ -12,6 +12,11 @@ body {
 header {
     display: grid;
 }
+
+button:hover {
+    cursor: pointer;
+}
+
 .head {
     background-color: #1C1C1C;
     width: 100%;
@@ -49,4 +54,10 @@ main {
     background-color: #262626;
     display: grid;
     place-items: center;
+}
+
+iframe {
+    margin-top: 2rem;
+    display: block;
+    border-style:none;
 }

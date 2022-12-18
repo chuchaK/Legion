@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style/All.css">
     <link rel="stylesheet" href="./style/Pages.css">
+    <link rel="stylesheet" href="./style/Profile.css">
     <title>Document</title>
 </head>
 <body>
@@ -23,55 +24,98 @@
         <div class="l-column"> </div>
         <div class="center-column"> 
             <div class="buttons-left">
-                <button class="button prof act" onclick="document.location='Profile.html'"><img src="./img/profile.svg" alt="profile"></button>
-                <button class="button pass" onclick="document.location='./Message.html'"><img src="./img/message.svg" alt="message"></button>
-                <button class="button pass" onclick="document.location='Calendar.html'"><img src="./img/calendar.svg" alt="calendar"></button> 
+                <button class="button prof act" onclick="document.location='/profile'"><img src="./img/profile.svg" alt="profile"></button>
+                <button class="button pass" onclick="document.location='/message'"><img src="./img/message.svg" alt="message"></button>
+                <button class="button pass" onclick="document.location='/calendar'"><img src="./img/calendar.svg" alt="calendar"></a> 
                 <div></div>
             </div>
             <div class="window">
-                <input type="file" style="display: none;" id="changeUserPhoto" accept="image/jpeg, image/png, image/jpg, image/webp">
-                <div>
-                    <div>Имя</div> 
-                    <div>
-                        <span id="first-name-text"></span>
-                        <a class="edit-first-name">
-                            <img src="/img/editButton.svg" alt="edit name">
-                        </a>
-                        <input type="text" style="display: none;" id="change-fist-name"><a class="send-first-name">send</a>
+                <div class="up">
+                    <img class="avatar field" src="./img/avatar.svg">
+                    <div class="field">
+                        <div class="name-text">Имя</div> <br>
+                        <div>
+                            <span id="first-name-text"></span>
+                            <a class="edit-first-name">
+                                <img class="pen" src="/img/edit.svg" alt="edit name">
+                            </a>
+
+                            <div class="div-change-first-name" style="display: none">
+                                <input type="text" id="change-fist-name"><a class="send-first-name">send</a>
+                            </div>
+
+                        </div>
                     </div>
-                </div>
-                
-                <div>
-                    <div>Фамилия</div> 
-                    <div>
-                        <span id="last-name-text"></span>
-                        <a class="edit-last-name">
-                            <img src="/img/editButton.svg" alt="edit name">
-                        </a>
-                        <input type="text" style="display: none;" id="change-last-name"><a class="send-last-name">send</a>
+                    
+                    <div class="field">
+                        <div class="name-text">Фамилия</div> <br>
+                        <div>
+                            <span id="last-name-text"></span>
+                            <a class="edit-last-name">
+                                <img class="pen" src="/img/edit.svg" alt="edit name">
+                            </a>
+
+                            <div class="div-change-last-name" style="display: none">
+                                <input type="text" id="change-last-name"><a class="send-last-name">send</a>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <div class="name-text">Команда</div> <br>
+                        <div>
+                            <span id="team-text"></span>
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <div class="name-text">Почта</div> <br>
+                        <div>
+                            <span id="email-text"></span>
+                            <a class="edit-email">
+                                <img class="pen" src="/img/edit.svg" alt="edit name">
+                            </a>
+                            <div class="div-change-email" style="display: none">
+                                <input type="text" id="change-email"><a class="send-email">send</a>
+                            </div>
+                        </div>  
+                    </div>   
+                    
+                    <div class="ps name-text">
+                        Изменить <br>пароль
                     </div>
                 </div>
 
-                <div>
-                    <div>Команда</div> 
-                    <div>
-                        <span id="team-text"></span>
+                <div class="level-out">
+                    <p class="level-in">Твой уровень: </p>
+                    <span id="number-level"></span>
+                </div>
+                <br><hr>
+                <div class="achivment">
+                    <p class="lab">Выбери достижение:</p>
+                    <div class="check">
+                        <input type="checkbox" id="workout">
+                        <label for="workout">Посещение тренировки</label>
+                    </div>              
+                    <div class="check">
+                        <input type="checkbox" id="battle">
+                        <label for="battle"> Участие в баттлах/соревнованиях</label>
+                    </div>
+                    <div class="check">
+                        <input type="checkbox" id="mk">
+                        <label for="mk">Посещение мастер-класса</label>
+                    </div>
+                    <div class="check last">
+                        <input type="checkbox" id="social">
+                        <label for="social">Активность в социальных сетях</label>
                     </div>
                 </div>
-
-                <div>
-                    <div>Почта</div> 
-                    <div>
-                        <span id="email-text"></span>
-                        <a class="edit-email">
-                            <img src="/img/editButton.svg" alt="edit name">
-                        </a>
-                        <input type="text" style="display: none;" id="change-email"><a class="send-email">send</a>
-                    </div>  
-                </div>           
+                <br><hr>
             </div>
         </div>
         <div class="r-column"> </div>
     </main>
+    <script src="profile.js"></script>
 </body>
 </html>

@@ -1,0 +1,90 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  link(rel='stylesheet' href='./style/All.css')
+  link(rel='stylesheet' href='./style/Pages.css')
+  link(rel='stylesheet' href='./style/Message.css')
+  link(rel='stylesheet', href='/style/main.css')
+  script(src='/socket.io/socket.io.js')
+  script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js')
+  title Legion
+header
+  .head
+    .links
+      a(method='get' action='/')
+        img#logo-head(src='./img/logo_color.png' alt='logo')
+      a(href='https://vk.com/legionbmstu')
+        img#vk(src='./img/vk.png' alt='vk')
+      a(href='https://t.me/legionbmstu')
+        img#tg(src='./img/tg.png' alt='tg')
+    button.enter(onclick="document.location='/logout'")
+      p.enter-l ВЫХОД ЕСТЬ
+main
+  .l-column  
+  .center-column
+    .buttons-left
+      button.button.pass(onclick="document.location='/profile'")
+        img(src='./img/profile.svg')
+      button.button.pass(onclick="document.location='/message'")
+        img(src='./img/message.svg')
+      button.button.cal.act(onclick="document.location='/calendar'")
+        img(src='./img/calendar.svg')
+      div
+    .window
+      //- .chat-messages.has-text-left
+        
+      .send-mes
+        form
+          div
+            input#chat.message(type='text' name='chat' bind:value='{userMessage}' placeholder='Сообщение')
+          button.send(type='submit' on:sub='{sendHandler}')
+            img.send-p(src='./img/Email.svg' alt='Отправить')
+      .chat
+        #chat-messages
+  script.
+    const socket = io();
+    let all_msg = true
+    //- const name = message_info
+    const name = "user"
+    console.log(name)
+    $('form').submit(function() {
+        //- const name = $('#first_name').val();
+        const message = $('#chat').val();
+        socket.emit('chatter', `${message}`);
+        $('#chat').val('');
+        return false; 
+      });
+
+      socket.on('chatter', function(message) {
+        console.log("OK")
+        $('#chat-messages').append($('<li>').text(name + ": " + message));
+      });
+        //- br
+          //- //p.(class="{message.author === 'user' ? 'message_right' : 'message_left'}")
+        //-br
+      if (all_msg == true)
+      {
+        all_msg = false
+        socket.emit('all_msg');
+        socket.on('all_msg', function(message) {
+          $('#chat-messages').empty()
+          console.log("all_msg")
+          let len = message.length
+          for (let i = 0; i < len; i+=1)
+          {
+            if (message[i].first_name == name)
+            {
+              $('#chat-messages').append($('<li>').text(name + ": " + message[i].message));
+            }
+            else 
+            {
+              $('#chat-messages').append($('<li>').text(name + ": " + message[i].message));
+            }
+          }
+        })
+      }
+  .r-column
+//- script
+//-   include js/profile.js
