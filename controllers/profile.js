@@ -9,11 +9,6 @@ app.get("/profile", async function (request, response) {
   response.render("profile", { profile: userProfile });
 });
 
-app.get("/profile/new", function (request, response) {
-  // Render login template
-  response.render("profileNew");
-});
-
 app.post("/profile/update", function (request, response) {
   console.log("NELSON request", request);
   console.log("NELSON request.session", request.session);
@@ -28,7 +23,8 @@ app.post("/profile/update", function (request, response) {
   response.end();
 });
 
-app.post("/profile", async function (request, response) {
+app.post("/profile/new", async function (request, response) {
+  console.log("vbnm");
   let password = request.body.password;
   let password_2 = request.body.password_2;
 
@@ -42,9 +38,12 @@ app.post("/profile", async function (request, response) {
     //   authorize(req);
     //   response.render("profile");
     // }
-    response.send("User created successfully!");
+    response.redirect("/login");
     response.end();
   } else {
-    return response.redirect("/profile/new");
+    request.flash("info", "flash message");
+    return response.render("signup", {
+      successes: request.flash("info"),
+    });
   }
 });
