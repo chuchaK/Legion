@@ -17,7 +17,7 @@ const updateUser = async (inputId, fieldId) => {
   const inputValue = document.getElementById(inputId).value;
   const formData = new FormData();
   formData.append(fieldId, inputValue);
-  console.log("NELSON formData", formData);
+  // console.log("NELSON formData", formData);
   const result = await fetch(constants.app.URL + "/profile/update", {
     method: "POST",
     credentials: "same-origin",

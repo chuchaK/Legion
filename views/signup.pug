@@ -18,11 +18,15 @@ header
 main
   .l-column  
   .center-column
+    div.col-10.ml-sm-auto.px-4
+    if successes
+      for success in successes
+        div.alert.alert-success= success
     .form.external
       .form.up
         p.name-l LEGIONER
       .down
-        form.external-field(method='post' action='/profile')
+        form.external-field(method='post' action='/profile/new')
           .field.b
             img.img-field(src='packet.svg' alt='packet')
             input#first_name.input-field(type='text' name='first_name' placeholder='First Name')

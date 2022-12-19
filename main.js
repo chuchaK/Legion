@@ -4,5 +4,6 @@ require("./controllers/calendar");
 require("./controllers/login");
 require("./controllers/message");
 require("./controllers/profile");
+require("./controllers/signup");
 
 app.listen(3000);
